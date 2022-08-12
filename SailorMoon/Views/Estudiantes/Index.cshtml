@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SailorMoon.Models.Estudiante>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carnet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoEst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdGradoFkNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dni)
+            </td>
+            <td>
+                <img src= "/images/@item.Carnet" style= "width:75px; height:75px;"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoEst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdGradoFkNavigation.Grado1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdEstudiante">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdEstudiante">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEstudiante">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

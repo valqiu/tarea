@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SailorMoon.Models.NotasPeriodo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NotaPeriodo1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotaPeriodo2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotaPeriodo3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotaPeriodo4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PromedioAnual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdNotasNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaPeriodo1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaPeriodo2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaPeriodo3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaPeriodo4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PromedioAnual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdNotasNavigation.Promedio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdPeriodo">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdPeriodo">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPeriodo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

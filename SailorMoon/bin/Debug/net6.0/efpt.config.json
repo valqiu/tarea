@@ -1,0 +1,75 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "SailorMoonContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Context",
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "SailorMoon",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[asistencias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[conduccion_descriptiva]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[curso]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[estudiante]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[grado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[institucion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[notas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[notas_periodo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[personal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tipo_usuario]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "LAPTOP-2DTCBV95.SailorMoon",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

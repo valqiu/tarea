@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SailorMoon.Models.ConduccionDescriptiva>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Periodo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPersonal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEstudianteNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPersonal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEstudianteNavigation.Nombre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdConduccionDescriptiva">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdConduccionDescriptiva">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdConduccionDescriptiva">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
